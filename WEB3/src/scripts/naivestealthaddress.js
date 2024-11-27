@@ -66,24 +66,28 @@ async function generateAddress() {
 
 async function announce() {
     try {
-        // checking metamask
+        const loadingOverlay = document.getElementById("loadingOverlay");
+        loadingOverlay.style.display = "flex";
         if (!window.ethereum) {
             alert("MetaMask is required to interact with this dApp");
+            loadingOverlay.style.display = "none"; 
             return;
         }
-        // connecting to metamask
+
         await ethereum.request({ method: 'eth_requestAccounts' });
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
-        // connecting to announcer contract
+
         const announcerABI = [
             "function announce(uint256 schemeId, address stealthAddress, bytes ephemeralPubKey, bytes metadata) external",
         ];
         const announcer = new ethers.Contract(ANNOUNCER_ADDRESS, announcerABI, signer);
+
         const schemeId = 1;
         const stealthAddress = document.getElementById("txtboxSA").value;
         const ephemeralPubKey = ethers.utils.arrayify(document.getElementById("txtboxANN").value);
         const metadata = ethers.utils.arrayify(document.getElementById("txtboxVT").value);
+
         const tx = await announcer.announce(schemeId, stealthAddress, ephemeralPubKey, metadata);
         await tx.wait();
 
@@ -91,6 +95,9 @@ async function announce() {
     } catch (error) {
         console.error(error);
         alert("An error occurred: " + error.message);
+    } finally {
+        // Nasconde il simbolo di caricamento
+        document.getElementById("loadingOverlay").style.display = "none";
     }
 }
 
