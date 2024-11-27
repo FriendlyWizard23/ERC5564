@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Stealth Meta Address</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <script src="scripts/naivestealthaddress.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="card p-4" style="width: 100%; max-width: 800px;">
+            <h2 class="text-center mb-4">Generate Stealth Meta Address</h2>
+            <div class="text-center mb-4">
+                <button id="generateBtn" class="btn btn-primary w-100" onclick="generateStealthMetaAddress()">Generate</button>
+            </div>
+            <div id="results" class="mt-4">
+                <div class="form-group mb-3">
+                    <label for="stealthMetaAddress">Stealth Meta Address</label>
+                    <input type="text" id="stealthMetaAddress" class="form-control" readonly placeholder="Generated Stealth Meta Address">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="publicViewKey">Public View Key</label>
+                    <input type="text" id="publicViewKey" class="form-control" readonly placeholder="Generated Public View Key">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="privateViewKey">Private View Key</label>
+                    <input type="text" id="privateViewKey" class="form-control" readonly placeholder="Generated Private View Key">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="publicSpendingKey">Public Spending Key</label>
+                    <input type="text" id="publicSpendingKey" class="form-control" readonly placeholder="Generated Public Spending Key">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="privateSpendingKey">Private Spending Key</label>
+                    <input type="text" id="privateSpendingKey" class="form-control" readonly placeholder="Generated Private Spending Key">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

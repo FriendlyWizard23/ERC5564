@@ -1,0 +1,86 @@
+@font-face {
+    font-family: Consolas;
+    src: url(./fonts/CONSOLA.TTF);
+  }
+body {
+    font-family: Consolas;
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    align-items: center;
+}
+
+h1,h2,h3,h4{
+    color:#5baaa1
+}
+
+.card-body {
+    border: 4px solid black; 
+    border-radius: 5;
+}
+
+.form-control, .btn {
+    background-color: #1a1a1a; 
+    border: 1px solid #333; 
+    color: #f8f9fa;
+}
+
+.form-control::placeholder {
+    color: #6c757d; 
+}
+
+
+.form-label {
+    font-weight: bold;
+    color: #f8f9fa; 
+}
+
+.t-title-label{
+    color:#5baaa1;
+}
+
+.p-result,label{
+    color:#5baaa1; 
+}
+
+.valid{
+    color:green;
+}
+.invalid{
+    color:red;  
+}
+
+
+body {
+    background-color: #1c1e22; 
+    color: #f8f9fa;
+}
+.card {
+    background-color: #292b2f; 
+    border: 1px solid #5baaa1; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-primary {
+    background-color: #5baaa1; 
+    border-color: #5baaa1;
+}
+.btn-primary:hover {
+    background-color: #4b958f; 
+}
+input.form-control {
+    background-color: #343a40;
+    color: #f8f9fa;
+    border: 1px solid #5baaa1; 
+}
+input.form-control::placeholder {
+    color: #adb5bd; 
+}
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #343a40;
+    border: 1px solid #5baaa1;
+    border-radius: 5px;
+}

@@ -1,0 +1,104 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "stealthAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes",
+				"name": "ephemeralPubKey",
+				"type": "bytes"
+			},
+			{
+				"internalType": "bytes",
+				"name": "viewingKey",
+				"type": "bytes"
+			},
+			{
+				"internalType": "bytes",
+				"name": "spendingPubKey",
+				"type": "bytes"
+			}
+		],
+		"name": "checkStealthAddress",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "stealthAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes",
+				"name": "ephemeralPubKey",
+				"type": "bytes"
+			},
+			{
+				"internalType": "bytes",
+				"name": "viewingKey",
+				"type": "bytes"
+			},
+			{
+				"internalType": "bytes",
+				"name": "spendingKey",
+				"type": "bytes"
+			}
+		],
+		"name": "computeStealthKey",
+		"outputs": [
+			{
+				"internalType": "bytes",
+				"name": "",
+				"type": "bytes"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes",
+				"name": "stealthMetaAddress",
+				"type": "bytes"
+			}
+		],
+		"name": "generateStealthAddress",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "stealthAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes",
+				"name": "ephemeralPubKey",
+				"type": "bytes"
+			},
+			{
+				"internalType": "bytes1",
+				"name": "viewTag",
+				"type": "bytes1"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement Parser</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./scripts/naivestealthaddress.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body class="bg-dark text-light">
+    <div class="container mt-5">
+        <div class="card bg-dark text-light shadow-sm">
+            <div class="card-body bg-dark">
+                <h1 class="text-center">Parse Announcements</h1>
+                <div class="text-center mb-4">
+                    <button id="parseButton" onclick="parseAnnouncements()" class="btn btn-primary btn-md">Parse Announcements</button>
+                </div>
+                <div id="results" class="text-light"></div>
+                <div class="mt-4">
+                    <div class="mb-3">
+                        <input type="text" id="privateViewingKey" placeholder="Private Viewing Key" class="form-control" hidden>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" id="publicSpendingKey" placeholder="Public Spending Key" class="form-control" hidden>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" id="privateSpendingKey" placeholder="Private Spending Key" class="form-control" hidden>
+                    </div>
+                    <div class="text-center">
+                        <button id="btnCompute" onclick="checkSA()" class="btn btn-primary" disabled>Check Stealth Address</button>
+                    </div>
+                </div>
+                <div id="divSA" class="mt-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>loadABI();</script>
+</body>
+</html>
